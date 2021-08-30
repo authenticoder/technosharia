@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/contactform.html');
 });
 
-app.post('https://techno-sharia.herokuapp.com/', (req, res) => {
+app.post('/', (req, res) => {
     console.log(req.body);
 
     const transporter = nodemailer.createTransport({
