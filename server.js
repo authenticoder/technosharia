@@ -8,11 +8,11 @@ const PORT = process.env.PORT || 8080;
 app.use(express.static('public'));
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('https://techno-sharia.herokuapp.com/', (req, res) => {
     res.sendFile(__dirname + '/public/contactform.html');
 });
 
-app.post('/', (req, res) => {
+app.post('https://techno-sharia.herokuapp.com/', (req, res) => {
     console.log(req.body);
 
     const transporter = nodemailer.createTransport({
