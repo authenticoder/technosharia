@@ -16,7 +16,7 @@ contactForm.addEventListener('submit', (e) => {
     };
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://techno-sharia.herokuapp.com/');
+    xhr.open('POST', '/');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.onload = function() {
         if(xhr.responseText == 'Success') {
