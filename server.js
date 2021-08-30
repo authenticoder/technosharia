@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.static('public'));
 app.use(express.json());
 
-app.get('https://techno-sharia.herokuapp.com/', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/contactform.html');
 });
 
