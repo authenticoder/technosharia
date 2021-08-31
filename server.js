@@ -3,6 +3,9 @@ const app = express();
 const nodemailer = require('nodemailer');
 const bodyParser = require("body-parser");
 
+
+const { USER_PASSWORD, USER_EMAIL } = process.env;
+
 const PORT = process.env.PORT || 8080;
 
 // Middleware
@@ -32,8 +35,8 @@ app.post('/', (req, res) => {
         host: 'smtp.gmail.com',
         secure: true,
         auth: {
-            user: 'authenticoderio@gmail.com',
-            pass: 'Dicaprioliamsy646913',
+            user: USER_PASSWORD,
+            pass: USER_EMAIL,
         }
     });
 
