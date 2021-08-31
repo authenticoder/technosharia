@@ -12,6 +12,8 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/contactform.html');
 });
 
+app.use(bodyParser.json());
+
 app.post('/', (req, res) => {
     console.log(req.body);
 
