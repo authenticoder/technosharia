@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.use(bodyParser.json());
 
-app.use(req, res, next => {
+app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader(
         'Access-Control-Allow-Methods',
@@ -23,7 +23,7 @@ app.use(req, res, next => {
     );
     res.setHeader('Acess-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
-})
+});
 
 app.post('/', (req, res) => {
     console.log(req.body);
